@@ -1,0 +1,3 @@
+# MUKLA Design Document
+
+Description of dependency discovery and resolution process goes here...
