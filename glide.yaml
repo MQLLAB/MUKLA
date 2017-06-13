@@ -1,4 +1,4 @@
-package: .
+package: github.com/MQLLAB/MUKLA
 import:
 - package: github.com/fatih/color
   version: ~1.5.0
