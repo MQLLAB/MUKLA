@@ -20,7 +20,7 @@ before_install:
 install:
   - glide install
 
-after_script:
+before_deploy:
   - cd $TRAVIS_BUILD_DIR/website
   - "$HOME/local/bin/hugo"
 
