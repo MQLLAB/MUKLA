@@ -1,0 +1,7 @@
+/bin
+/local
+/pkg
+/src
+.DS_Store
+.idea
+*.iml
