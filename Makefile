@@ -7,7 +7,7 @@ VETARGS=-asmdecl -atomic -bool -buildtags -copylocks -methods \
 
 VERSION="master"
 
-all: build
+all: build cover
 
 verify:
 		echo "Verifying path of project conforms to expected setup and includes ${REQUIRED_STRUCTURE}"
