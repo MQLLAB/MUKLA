@@ -7,3 +7,5 @@
 .idea
 *.iml
 vendor/
+website/public/*
+!website/public/.keep
