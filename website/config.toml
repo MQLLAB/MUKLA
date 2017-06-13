@@ -11,7 +11,7 @@ googleAnalytics = ""
 	name = "MUKLA"
 	description = "MQL4 package manager for MetaTrader 4."
 
-	github_user   = "MQLLLAB"
+	github_user   = "MQLLAB"
 	github_repo   = "MUKLA"
 	github_banner = false
 
