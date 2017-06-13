@@ -2,6 +2,7 @@
 /local
 /pkg
 /src
+/tmp
 .DS_Store
 .idea
 *.iml

@@ -9,6 +9,3 @@ before_install:
 
 install:
   - glide install
-
-script:
-  - go run main.go
