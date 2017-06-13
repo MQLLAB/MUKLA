@@ -1,19 +1,19 @@
-baseurl = "https://example.org/"
-languageCode = "en-us"
+baseurl = "https://mqllab.github.io/MUKLA/"
+languageCode = "en-au"
 metadataformat = "yaml"
-title = "Alabaster"
+title = "MUKLA: MQL4 package manager for MetaTrader 4."
 theme = "hugo-alabaster-theme"
 
 disqusShortname = ""
 googleAnalytics = ""
 
 [params]
-	name = "Alabaster"
-	description = "A documentation theme for Hugo."
+	name = "MUKLA"
+	description = "MQL4 package manager for MetaTrader 4."
 
-	github_user   = "digitalcraftsman"
-	github_repo   = "hugo-alabaster-theme"
-	github_banner = true
+	github_user   = "MQLLLAB"
+	github_repo   = "MUKLA"
+	github_banner = false
 
 	custom_css = []
 	custom_js  = []
@@ -24,14 +24,13 @@ googleAnalytics = ""
 [params.sidebar]
 	logo = "favicon.ico"
 
-
 	github_button  = true
-	travis_button  = false
-	codecov_button = false
+	travis_button  = true
+	codecov_button = true
 	gratipay = ""
 
 	show_relations = true
 
 [params.footer]
-	copyright = "[Digitalcraftsman](https://github.com/digitalcraftsman)"
-	show_powered_by = true
+	copyright = "[Eneset Group Trust](https://www.eneset.com)"
+	show_powered_by = false
