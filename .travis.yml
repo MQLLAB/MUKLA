@@ -21,5 +21,13 @@ install:
   - glide install
 
 after_script:
-  - cd website
+  - cd $TRAVIS_BUILD_DIR/website
   - $HOME/local/bin/hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: $TRAVIS_BUILD_DIR/website/public
+  github_token: $GITHUB_API_KEY
+  on:
+    branch: master
