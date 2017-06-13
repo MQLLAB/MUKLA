@@ -1,11 +1,25 @@
+sudo: false
+
 language: go
 
 go:
   - 1.8.x
 
+env:
+  global:
+    - HUGO_VERSION=0.22
+
 before_install:
-  - mkdir -p /home/travis/gopath/bin
+  - mkdir -p $HOME/gopath/bin
   - curl https://glide.sh/get | sh
+  - mkdir -p $HOME/local/bin
+  - wget -O - "https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" | tar xz -C ${TMPDIR-/tmp}
+  - mv ${TMPDIR-/tmp}/hugo $HOME/local/bin/hugo
+  - hugo version
 
 install:
   - glide install
+
+after_script:
+  - cd website
+  - hugo
