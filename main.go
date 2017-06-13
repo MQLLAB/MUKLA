@@ -8,6 +8,8 @@
 // ludus, vis ut ancillae albucius. Cum eu equidem rationibus. Mel utinam
 // facilis epicurei an, in congue apeirian has. Nisl inermis habemus pro et.
 // Mea ne munere inciderint, cum ut sumo tibique, no mea illum choro.
+//
+// For more information visit https://mqllab.github.io/MUKLA
 package main
 
 import (
