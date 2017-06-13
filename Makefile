@@ -23,7 +23,7 @@ vet: fmt
 test: fmt
 		go test -v -timeout=30s -parallel=4 $(TEST)
 
-cover: test
+cover:
 		contrib/coverage.sh
 
 build: test vet
