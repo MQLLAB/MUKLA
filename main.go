@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/fatih/color"
 )
 
 func main() {
-	fmt.Printf("Hello, world.\n")
-	os.Exit(-1)
+	color.Yellow("We have red")
+	os.Exit(0)
 }
