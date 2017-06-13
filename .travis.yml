@@ -4,10 +4,10 @@ language: go
 
 go:
   - 1.8.x
-
 env:
   global:
     - HUGO_VERSION=0.22
+    - secure: dLX/WNIW9piTKK1kWwynWnaV+B2lfq7DNUpGZll1nnYak7tRlj8oCndlZkvB5RV1JxDz5EYpFkkdkmU2dZh/mKqkcArJJLlaSuRW9KKsbrqktmGQpxQufV0k/o7M/GCBE30/WHUnfoAfJILRxSJWp74Mw8iJDCIv2agjzN99wCZATjHW0MLYlPQLtLLaFMiW+aQoOZrEFo2aD7bY4KBemJQqHquLaxnmSQPaSSVk1i3B7WyLfdqRbfXSJXAnQjuSjOk1QCH0VLGbWjAiL0X8l7QZ1XbkhmF8wYnCrAsmNlU52PjwwVZ2ehMhn/wXIzf1WzG+YSQwE69ub3To/uCRS8pfk7xI7zL9wpHWQ0734P8OjUfyQIj622iAcQB2g3KbsuOOhWjb2DvsNiANqHMp+xfWmu6lrl9ndLDLQAmQ41r2cn9bmTC7KqIVpKVnxvn2fmHUSAqVKcslkEt7V8Kia+mQTd84qIJTtlK2xF9jyP3qN4jKlpCimXG9FLYyW+wTtoCnMwOCz07eDWsemhzGOqxB5CM0QLHjkON9IpP8nDQLX4w3wimqX4M4/9/Np7IqAVWRJVR2xAXw3HT9lcDVS8matGSOQNJ+HYf1CSjY6b0dYxbRJXwSbLBGoqWzdXRbOzOdXStVmroMpyAGCC0hYIBhboighOFFhzObMREBMZI=
 
 before_install:
   - mkdir -p $HOME/gopath/bin
@@ -15,19 +15,19 @@ before_install:
   - mkdir -p $HOME/local/bin
   - wget -O - "https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" | tar xz -C ${TMPDIR-/tmp}
   - mv ${TMPDIR-/tmp}/hugo $HOME/local/bin/hugo
-  - $HOME/local/bin/hugo version
+  - "$HOME/local/bin/hugo version"
 
 install:
   - glide install
 
 after_script:
   - cd $TRAVIS_BUILD_DIR/website
-  - $HOME/local/bin/hugo
+  - "$HOME/local/bin/hugo"
 
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: $TRAVIS_BUILD_DIR/website/public
-  github_token: $GITHUB_API_KEY
+  local_dir: "$TRAVIS_BUILD_DIR/website/public"
+  github_token: "$GITHUB_API_KEY"
   on:
     branch: master
