@@ -24,8 +24,7 @@ test: fmt
 		go test -v -timeout=30s -parallel=4 $(TEST)
 
 cover: test
-		go test -v -coverprofile=cover.out $(TEST)
-		go tool cover -html=cover.out
+		contrib/coverage.sh
 
 build: test vet
 		GOOS=darwin GOARCH=amd64 go build -ldflags "-X main.version=${VERSION} -s -w" -o bin/mukla-darwin-amd64 main.go
