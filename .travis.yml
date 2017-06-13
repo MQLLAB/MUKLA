@@ -11,5 +11,3 @@ install:
 
 script:
   - go run main.go
-
-X
