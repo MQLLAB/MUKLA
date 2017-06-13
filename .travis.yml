@@ -15,11 +15,11 @@ before_install:
   - mkdir -p $HOME/local/bin
   - wget -O - "https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" | tar xz -C ${TMPDIR-/tmp}
   - mv ${TMPDIR-/tmp}/hugo $HOME/local/bin/hugo
-  - hugo version
+  - $HOME/local/bin/hugo version
 
 install:
   - glide install
 
 after_script:
   - cd website
-  - hugo
+  - $HOME/local/bin/hugo
