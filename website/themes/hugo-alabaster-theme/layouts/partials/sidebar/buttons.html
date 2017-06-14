@@ -29,4 +29,26 @@
 		</a>
 	</p>
 	{{- end }}
+
+	{{ if .Site.Params.sidebar.godoc_button -}}
+	<p>
+		<a href="https://godoc.org/github.com/{{ $path }}">
+			<img
+			alt="https://godoc.org/github.com/{{ $path }}?status.svg"
+			src="https://godoc.org/github.com/{{ $path }}?status.svg"
+			/>
+		</a>
+	</p>
+	{{- end }}
+
+    	{{ if .Site.Params.sidebar.goreport_button -}}
+	<p>
+		<a href="https://goreportcard.com/report/github.com/{{ $path }}">
+			<img
+			alt="https://goreportcard.com/badge/github.com/{{ $path }}"
+			src="https://goreportcard.com/badge/github.com/{{ $path }}"
+			/>
+		</a>
+	</p>
+	{{- end }}
 {{- end }}

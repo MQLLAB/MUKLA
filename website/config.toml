@@ -24,9 +24,11 @@ googleAnalytics = ""
 [params.sidebar]
 	logo = "favicon.ico"
 
-	github_button  = true
-	travis_button  = true
-	codecov_button = true
+	github_button   = true
+	travis_button   = true
+	codecov_button  = true
+	godoc_button    = true
+	goreport_button = true
 	gratipay = ""
 
 	show_relations = true
