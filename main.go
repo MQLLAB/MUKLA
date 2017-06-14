@@ -19,6 +19,6 @@ import (
 )
 
 func main() {
-	color.Yellow("We have red")
+	color.Yellow("We have yellow")
 	os.Exit(0)
 }
