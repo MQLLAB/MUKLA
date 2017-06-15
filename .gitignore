@@ -10,3 +10,4 @@ vendor/
 website/public/*
 !website/public/.keep
 coverage.txt
+VERSION

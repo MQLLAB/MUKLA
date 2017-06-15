@@ -4,10 +4,12 @@ language: go
 
 go:
   - 1.8.x
+
 env:
   global:
     - HUGO_VERSION=0.22
     - secure: dLX/WNIW9piTKK1kWwynWnaV+B2lfq7DNUpGZll1nnYak7tRlj8oCndlZkvB5RV1JxDz5EYpFkkdkmU2dZh/mKqkcArJJLlaSuRW9KKsbrqktmGQpxQufV0k/o7M/GCBE30/WHUnfoAfJILRxSJWp74Mw8iJDCIv2agjzN99wCZATjHW0MLYlPQLtLLaFMiW+aQoOZrEFo2aD7bY4KBemJQqHquLaxnmSQPaSSVk1i3B7WyLfdqRbfXSJXAnQjuSjOk1QCH0VLGbWjAiL0X8l7QZ1XbkhmF8wYnCrAsmNlU52PjwwVZ2ehMhn/wXIzf1WzG+YSQwE69ub3To/uCRS8pfk7xI7zL9wpHWQ0734P8OjUfyQIj622iAcQB2g3KbsuOOhWjb2DvsNiANqHMp+xfWmu6lrl9ndLDLQAmQ41r2cn9bmTC7KqIVpKVnxvn2fmHUSAqVKcslkEt7V8Kia+mQTd84qIJTtlK2xF9jyP3qN4jKlpCimXG9FLYyW+wTtoCnMwOCz07eDWsemhzGOqxB5CM0QLHjkON9IpP8nDQLX4w3wimqX4M4/9/Np7IqAVWRJVR2xAXw3HT9lcDVS8matGSOQNJ+HYf1CSjY6b0dYxbRJXwSbLBGoqWzdXRbOzOdXStVmroMpyAGCC0hYIBhboighOFFhzObMREBMZI=
+    - secure: "jxOj85IN5M6A0o5N/GnhNqghSi1yRxIIWx/Dnwsd6uHdJ5xd6CFXD6zrWWTCx7GXXL0IyMBjtn89XZ0liPRAV7bhY/diGK6KpgaxeoaBXTwmyx9Gy0fCWFH+tclWAlbsq1uLwYYvJD2SuyxpLR069yl4IM73TT8erznflvFPX/y77xur/+TbFDpjGFTOKPzEcDfSlKGaIc9qdQkNmY/lyl2ZuVE+8gbZK+xXSuN47ZohECKRLdXir/KsPCZUL4VC3IcFQUZ7BciSOhN2oKOBGVV7h1Vvk/NjFZgJwM4Vrx2cXI6A6BTcEDoOJFOu6PKUIbRvicfipLNOD8WEqW78JGZq/Mqyn+Nh7q/4Kv0bNLipIvHwyAGw5HnO7qdhX7vnruDingT7WFxMM4E1dAoxPM+muwfaiWsKF27T+qeK9IlrioGRk/U/25C8b/vtvsOJyd8u52UM12+aD0tmSyl4FPOXbbUlK4kFQGyg9D2Bpn9Ot8NpYBmTCna18FO8NrnmiyFk6Ca513BjQ5nKMYh0+fSI7M/gdviQuoAXXD3E01FlKO4JL2NGXniTuxYLRObiDHl5EQoNRlk2pDvNhXJBIfGwQLH8Nr8E4vFzjP/89m+082Ti3f+/TkXDmzNXKDfJrLk8njo9CcycI32RBhnjSDfAUWrMq5he1VEVRywn+gU="
 
 before_install:
   - mkdir -p $HOME/gopath/bin
@@ -31,6 +33,11 @@ deploy:
   github_token: "$GITHUB_API_KEY"
   on:
     branch: master
+
+after_deploy:
+  - curl -T bin/mukla-darwin-amd64-$(cat VERSION) -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/mukla-darwin-amd64-$(cat VERSION)
+  - curl -T bin/mukla-linux-amd64-$(cat VERSION) -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/mukla-linux-amd64-$(cat VERSION)
+  - curl -T bin/mukla-windows-amd64-$(cat VERSION).exe -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/bin/mukla-windows-amd64-$(cat VERSION).exe
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
