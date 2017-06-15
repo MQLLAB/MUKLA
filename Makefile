@@ -7,7 +7,7 @@ VETARGS=-asmdecl -atomic -bool -buildtags -copylocks -methods \
 
 VERSION:=$(shell date +"%Y%d%m-%H%M%S")
 
-all: clean version build cover
+all: clean version build cover release
 
 version:
 		echo "${VERSION}" > VERSION
@@ -34,6 +34,13 @@ build: test vet
 		GOOS=linux GOARCH=amd64 go build -ldflags "-X main.version=${VERSION} -s -w" -o bin/mukla-linux-amd64-${VERSION} main.go
 		GOOS=windows GOARCH=amd64 go build -ldflags "-X main.version=${VERSION} -s -w" -o bin/mukla-windows-amd64-${VERSION}.exe main.go
 		rm -rf tmp
+
+release: build
+		chmod +x bin/mukla-darwin-amd64-${VERSION}
+		chmod +x bin/mukla-linux-amd64-${VERSION}
+		tar -czvf bin/mukla-darwin-amd64-${VERSION}.tar.gz -C bin mukla-darwin-amd64-${VERSION}
+		tar -czvf bin/mukla-linux-amd64-${VERSION}.tar.gz -C bin mukla-linux-amd64-${VERSION}
+		zip -j bin/mukla-windows-amd64-${VERSION}.zip bin/mukla-windows-amd64-${VERSION}.exe
 
 clean:
 		rm -rf bin
