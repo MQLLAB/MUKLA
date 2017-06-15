@@ -35,6 +35,8 @@ deploy:
     branch: master
 
 after_deploy:
+  - ls
+  - cat VERSION
   - curl -T bin/mukla-darwin-amd64-$(cat VERSION) -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/mukla-darwin-amd64-$(cat VERSION)
   - curl -T bin/mukla-linux-amd64-$(cat VERSION) -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/mukla-linux-amd64-$(cat VERSION)
   - curl -T bin/mukla-windows-amd64-$(cat VERSION).exe -uegorpe:${BINTRAY_API_KEY} https://api.bintray.com/content/mqllab/MUKLA/snapshots/$(cat VERSION)/bin/mukla-windows-amd64-$(cat VERSION).exe
