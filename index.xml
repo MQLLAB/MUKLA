@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MUKLA: MQL4 package manager for MetaTrader 4.</title>
+    <link>https://mqllab.github.io/MUKLA/</link>
+    <description>Recent content on MUKLA: MQL4 package manager for MetaTrader 4.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 23 Apr 2016 15:57:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://mqllab.github.io/MUKLA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://mqllab.github.io/MUKLA/getting-started/</link>
+      <pubDate>Sat, 23 Apr 2016 15:57:19 +0200</pubDate>
+      
+      <guid>https://mqllab.github.io/MUKLA/getting-started/</guid>
+      <description>Installation Install Hugo Hugo itself is just a single binary without dependencies on expensive runtimes like Ruby, Python or PHP and without dependencies on any databases.
+Note
+Currently, this theme makes use of features that will be part of the Hugo v0.16 release. You have to compile the latest developement version yourself.
+ Let&amp;rsquo;s make sure Hugo is set up as expected. You should see a similar version number in your terminal:</description>
+    </item>
+    
+    <item>
+      <title>Adding content</title>
+      <link>https://mqllab.github.io/MUKLA/adding-content/</link>
+      <pubDate>Sat, 23 Apr 2016 20:26:34 +0200</pubDate>
+      
+      <guid>https://mqllab.github.io/MUKLA/adding-content/</guid>
+      <description>Hello world Let&amp;rsquo;s create our first content file for your documentation. Open a terminal and add the following command for each new file you want to add. Replace &amp;lt;section-name&amp;gt; with a general term that describes your document in detail.
+hugo new &amp;lt;section-name&amp;gt;/filename.md  Visitors of your website will find the final document under www.example.com/&amp;lt;section-name&amp;gt;/filename/.
+Since it&amp;rsquo;s possible to have multiple content files in the same section I recommend to create at least one index.</description>
+    </item>
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://mqllab.github.io/MUKLA/roadmap/</link>
+      <pubDate>Sat, 23 Apr 2016 20:08:11 +0100</pubDate>
+      
+      <guid>https://mqllab.github.io/MUKLA/roadmap/</guid>
+      <description>Quo vadis? The port of the original Alabaster theme has replicated nearly all of its features. A few are still missing, but I&amp;rsquo;ve good news: the Hugo community is actively working on this issues. Maybe with the next release of Hugo we can abandon this list. Stay tuned.
+Planned features Localization Currently, it is possible to collect all strings in a single place for easy customization. However, this only enables you to define all strings in a single language.</description>
+    </item>
+    
+    <item>
+      <title>Foreword</title>
+      <link>https://mqllab.github.io/MUKLA/</link>
+      <pubDate>Sat, 23 Apr 2016 15:21:22 +0200</pubDate>
+      
+      <guid>https://mqllab.github.io/MUKLA/</guid>
+      <description>What is Alabaster? Alabaster was originally a theme for the popular documentation tool Sphinx. This theme port to Hugo theme is all about documentations. It should allow you to easily create a documentation for your projects.
+Fabric and Invoke are two examples of the Alabaster theme in the wild.
+The following pages will guide you through the setup, introduce you to the very basics of Hugo and show you the capabilities of this theme.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/getting-started/</loc>
+    <lastmod>2016-04-23T15:57:19+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/adding-content/</loc>
+    <lastmod>2016-04-23T20:26:34+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/roadmap/</loc>
+    <lastmod>2016-04-23T20:08:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/</loc>
+    <lastmod>2016-04-23T15:21:22+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/adding-content/</loc>
+    <lastmod>2016-04-23T20:26:34+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/getting-started/</loc>
+    <lastmod>2016-04-23T15:57:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/</loc>
+    <lastmod>2016-04-23T15:57:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/roadmap/</loc>
+    <lastmod>2016-04-23T20:08:11+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mqllab.github.io/MUKLA/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
